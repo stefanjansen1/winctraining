@@ -11,17 +11,27 @@ goal_0 = 32
 goal_1 = 54 
 scorers = (player1) + " " + str(goal_0) + ", " + (player2) + " " + str(goal_1)
 print (scorers)
+
+''' NEW PART f' toevoeging report2
+Op deze manier krijg ik een foutmelding op mijn Wincpy check, maar ik kom er dus niet uit wat er fout gaat.
+Het resultaat lijkt hetzelfe als 'report'
+'''
+
+report2 = f'{player1} scored in the {goal_0}nd minute\n{player2} scored in the {goal_1}th minute'
 report = (player1) + " scored in the " + str(goal_0) + "nd minute" + "\n" + (player2) + " scored in the " + str(goal_1) + "th minute"
 print (report)
 
+
 # Part 2
 player = 'Frank Rijkaard'
-first_name = (player[0:5])
-last_name = (player[6:14])
-last_name_len = len(last_name)
+first_name = (player[0:player.find(" ")])
+last_name = (player[player.find(" "):])
+
 first_name_len = len(first_name)
-name_short = (player[0]) + ". " + (player[6:14])
+last_name_len = len(last_name)-1
+
+name_short = (player[0]) + "." + (player[player.find(" "):])
 first_name2 = (first_name) + "! "
-chant = (first_name2) * int(first_name_len-1) + (first_name) + "!"
-good_chant=(chant) !=" "
+chant = (first_name2) * (first_name_len-1) + (first_name) + "!"
+good_chant=-len(chant) !=" "
 print (chant)
